@@ -40,24 +40,24 @@ DELLY_SR | Delly VCF | Count of supporting split reads (SR), normalized by mean 
 DELLY_SRMAPQ | Delly VCF | Median mapping quality of split reads (applies only to PRECISE calls) | n |
 DELLY_SRQ | Delly VCF | Split read consensus alignment quality (applies only to PRECISE calls) | y |
 DELLY_CE | Delly VCF | Consensus sequence entropy (applies only to PRECISE calls) | y |
-DELLY_HOMLEN | Delly VCF | Predicted microhomology length using a max. edit distance of 2, set to 0 if mssing
+DELLY_HOMLEN | Delly VCF | Predicted microhomology length using a max. edit distance of 2, set to 0 if mssing | y |
 DELLY_GQ | Delly VCF | Genotype quality | y |
 DELLY_FT_PASS | Delly VCF | Binary flag indicating that the per-sample genotype filter (FT) was passed | n | 
 DELLY_RDCN | Delly VCF | Read depth-based copy number estimate | n |
-LUMPY_QUAL
-LUMPY_PRECISE
-LUMPY_PE
-LUMPY_SR
-LUMPY_GQ
-LUMPY_DP
-LUMPY_QRFR
-LUMPY_RSFR
-LUMPY_RPFR
-LUMPY_QAFR
-LUMPY_ASFR
-LUMPY_ASCFR
-LUMPY_APFR
-LUMPY_AB
+LUMPY_QUAL | LUMPY VCF | Normalized rank score of VCF-retrieved QUAL values | n | 
+LUMPY_PRECISE | LUMPY VCF | Binary flag indicating precise (1) versus imprecise (0) SV calls | y |
+LUMPY_PE | LUMPY VCF | Number of variant supporting paired reads, normalized by mean coverage | n |
+LUMPY_SR | LUMPY VCF | Number of variant supporting split reads, normalized by mean coverage | n |
+LUMPY_GQ | LUMPY VCF | Genotype quality | y |  
+LUMPY_DP | LUMPY VCF | Read depth, normalized by mean coverage | n | 
+LUMPY_QRFR | LUMPY VCF | QR/RO; fraction of sum of quality reference observation and reference allele observation count, with partial observations recorded fractionally | n |
+LUMPY_RSFR | LUMPY VCF | RS/RO; fraction of reference allele SR observation count and reference allele observation count, with partial observations recorded fractionally | n | 
+LUMPY_RPFR | LUMPY VCF | RP/RO; fraction of reference allele PR observation count and reference allele observation count, with partial observations recorded fractionally | y | 
+LUMPY_QAFR | LUMPY VCF | QA/AO; fraction of sum of quality of alternate observations and alternate allele observations, with partial observations recorded fractionally | y | 
+LUMPY_ASFR | LUMPY VCF | AS/AO; fraction of alternate allele SR observation count and alternate allele observations, with partial observations recorded fractionally | n | 
+LUMPY_ASCFR | LUMPY VCF | ASC/AO; fraction of  alternate allele clipped-read observation count and alternate allele observations, with partial observations recorded fractionally | y | 
+LUMPY_APFR | LUMPY VCF | AP/AO; fraction of alternate allele PR observation count and alternate allele observations, with partial observations recorded fractionally | y | 
+LUMPY_AB | LUMPY VCF | Allele balance, fraction of observations from alternate allele, QA/(QR+QA) | y |
 MANTA_QUAL
 MANTA_PRECISE
 MANTA_HOMLEN
