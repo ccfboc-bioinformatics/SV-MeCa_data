@@ -68,14 +68,14 @@ MANTA_VF  | Manta VCF | Estimate of variant fraction: Ratio of sum of supporting
 MANTA_SampleFT  | Manta VCF | Filters MinGQ (genotype quality) or HomRef (homozygous reference) passsed (0) vs not passed (1) | y |
 MANTA_NoPairSupport  | Manta VCF | PR support filter of the alternate allele passed (0) or not (1); does only apply for variants significantly larger than the PR fragment size |  y | 
 MANTA_MaxMQ0Frac  | Manta VCF | Filter for fraction of reads with MAPQ0 around either breakend exceeds 0.4 (1) or not (0); does only apply to short variants <1000bp | n |
-PINDEL_DP
-PINDEL_VF
-PINDEL_HOMLEN
+PINDEL_DP | Pindel VCF | Local coverage estimate: ratio of sum of `AD values and mean coverage | y |
+PINDEL_VF | Pindel VCF | Variant fraction estimate: Number of alternate allele supporting reads divided by sum of `AD` values | y | 
+PINDEL_HOMLEN | Pindel VCF | Length of base pair identical micro-homology at event breakpoints, set to zero if missing | y |
 TARDIS_GT
 TARDIS_PRECISE
 TARDIS_CNVL
 TARDIS_RPSUP
 TARDIS_SRSUP
 
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+
+
