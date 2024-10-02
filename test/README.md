@@ -1,5 +1,5 @@
 # Test SV-MeCa
-Here some informations to test SV-MeCa with the example data set HG00514 from the [HGSVC2](https://www.internationalgenome.org/data-portal/data-collection/hgsvc2)
+Here some informations to test SV-MeCa with the example data set HG00514 from the [HGSVC2](https://www.internationalgenome.org/data-portal/data-collection/hgsvc2) downsampled from 30X to 9X to improve the runtime of the test
 
 ## Requirements
 
