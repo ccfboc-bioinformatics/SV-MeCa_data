@@ -17,7 +17,7 @@ Tab-separated complete listing of all features considered in deletion-specific S
 | Feature | Source | Description | Included in final model [y/n] | 
 | ------------- | ------------ | ------------- | ----------------|
 | SURVIVOR_ID | SURVIVOR VCF | Variant ID in SURVIVOR VCF output, identical to a single variant ID in standalone VCF outputs | 
-TP | Truvari VCF | Binary encoding of true and false positive SV calls | |
+TP | Truvari VCF | Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) | |
 SVLEN | SURVIVOR VCF | Absolute mean length of (consensus) SV call, extracted from SURVIVOR VCF output | y | 
 BD_ID | BreakDancer VCF | Variant ID in BreakDancer VCF output |
 DELLY_ID | Delly VCF | Variant ID in Delly VCF output |
@@ -58,16 +58,16 @@ LUMPY_ASFR | LUMPY VCF | AS/AO; fraction of alternate allele SR observation coun
 LUMPY_ASCFR | LUMPY VCF | ASC/AO; fraction of  alternate allele clipped-read observation count and alternate allele observations, with partial observations recorded fractionally | y | 
 LUMPY_APFR | LUMPY VCF | AP/AO; fraction of alternate allele PR observation count and alternate allele observations, with partial observations recorded fractionally | y | 
 LUMPY_AB | LUMPY VCF | Allele balance, fraction of observations from alternate allele, QA/(QR+QA) | y |
-MANTA_QUAL
-MANTA_PRECISE
-MANTA_HOMLEN
-MANTA_GQ
-MANTA_SR
-MANTA_PR
-MANTA_VF
-MANTA_SampleFT
-MANTA_NoPairSupport
-MANTA_MaxMQ0Frac
+MANTA_QUAL | Manta VCF | VCF-retrieved QUAL values, normalized by observed mean coverage | y |
+MANTA_PRECISE  | Manta VCF | Binary flag indicating precise (1) versus imprecise (0) structural variant calls | n |
+MANTA_HOMLEN  | Manta VCF | Length of base pair identical homology at event breakpoints, set to zero if missing | y |
+MANTA_GQ  | Manta VCF | Genotype Quality | n | 
+MANTA_SR  | Manta VCF | Count of supporting split reads (SR), normalized by mean coverage | n | 
+MANTA_PR  | Manta VCF | Count of supporting paired reads (PR), normalized by mean coverage | y |
+MANTA_VF  | Manta VCF | Estimate of variant fraction: Ratio of sum of supporting SR and PR vs sum of overall SR and PR | n | 
+MANTA_SampleFT  | Manta VCF | Filters MinGQ (genotype quality) or HomRef (homozygous reference) passsed (0) vs not passed (1) | y |
+MANTA_NoPairSupport  | Manta VCF | PR support filter of the alternate allele passed (0) or not (1); does only apply for variants significantly larger than the PR fragment size |  y | 
+MANTA_MaxMQ0Frac  | Manta VCF | Filter for fraction of reads with MAPQ0 around either breakend exceeds 0.4 (1) or not (0); does only apply to short variants <1000bp | n |
 PINDEL_DP
 PINDEL_VF
 PINDEL_HOMLEN
