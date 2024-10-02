@@ -2,7 +2,7 @@
 
 ## Overview
 
-1. `hg002_del_fm_initial.tsv`: full set of features initially considered in deletion-specific full SV-MeCa model
+1. `hg002_del_fm_initial.tsv`: complete listing of features initially considered in deletion-specific full SV-MeCa model
 
 ## Description
 
@@ -17,8 +17,8 @@ Tab-separated complete listing of all features considered in deletion-specific S
 | Feature | Description |
 | ------------- | ------------- |
 | SURVIVOR_ID | variant ID in SURVIVOR VCF output, identical to a single variant ID in standalone VCF outputs | 
-TP
-SVLEN
+TP | binary encoding of true and false positives |
+SVLEN | variant length in base pairs, extracted from SURVIVOR VCF output |  
 BD_ID
 DELLY_ID
 LUMPY_ID
