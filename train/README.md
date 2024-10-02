@@ -29,21 +29,21 @@ BD_QUAL | Quality score (Score) assigned by BreakDancer to SV calls | n |
 BD_RD | Number of supporting read pairs, normalized by mean coverage | y |
 BD_SB1 | Smaller No. of +/- supporting reads divided by greater number of +/- supporting reads at Pos1 (Orientation1) | y |
 BD_SB2 | Smaller No. of +/- supporting reads divided by greater number of +/- supporting reads at Pos2 (Orientation2); identical to BD_SB1 for insertions | y |
-DELLY_QUAL
-DELLY_PASS
-DELLY_VF
-DELLY_HQSUPPORT
-DELLY_RD
-DELLY_MAPQ
-DELLY_PE
-DELLY_SR
-DELLY_SRMAPQ
-DELLY_SRQ
-DELLY_CE
-DELLY_HOMLEN
-DELLY_GQ
-DELLY_FT_PASS
-DELLY_RDCN
+DELLY_QUAL | Normalized rank score of QUAL values extracted from Delly VCF output | n | 
+DELLY_PASS | `PASS` (1) or `LowQual` (0) in `FILTER` column of Delly VCF output | y |
+DELLY_VF | Variant fraction estimate from Delly VCF output, RV/(RR+RV) for PRECISE calls; DV/(DR+DV) for IMPRECISE calls | n |
+DELLY_HQSUPPORT | Estimator of local high quality read depth: RR+RV for PRECISE calls, DR+DV for IMPRECISE calls, normalized by mean coverage |  y |
+DELLY_RD | Normalized read depth ratio RD = RC/(RCL+RCR) | n |
+DELLY_MAPQ | Median mapping quality of paired-end reads | n |
+DELLY_PE | Count of supporting paired reads (PE), normalized by mean coverage | 
+DELLY_SR | Count of supporting split reads (SR), normalized by mean coverage | 
+DELLY_SRMAPQ | Median mapping quality of split reads (applies only to PRECISE calls)
+DELLY_SRQ | Split read consensus alignment quality (applies only to PRECISE calls)
+DELLY_CE | Consensus sequence entropy (applies only to PRECISE calls)
+DELLY_HOMLEN | Predicted microhomology length using a max. edit distance of 2, set to 0 if mssing
+DELLY_GQ | Genotype quality
+DELLY_FT_PASS | Binary flag indicating that the per-sample genotype filter (FT) was passed
+DELLY_RDCN | Read depth-based copy number estimate
 LUMPY_QUAL
 LUMPY_PRECISE
 LUMPY_PE
