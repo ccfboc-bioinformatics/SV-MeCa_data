@@ -22,9 +22,11 @@ cd ..
 
 # cram to bam 7min
 docker run -v $(pwd)/input:/input wembasop/sv-meca:latest "/opt/conda/envs/samtools/bin/samtools view -@ $CPU -b -o /input/HG00514.bam -T /input/$REFERENCE /input/HG00514.final.cram"
+rm input/HG00514.final.cram
 
 # downsample 16 min
 docker run -v $(pwd)/input:/input wembasop/sv-meca:latest "/opt/conda/envs/align/bin/gatk --java-options "-Xmx$RAM" DownsampleSam -I /input/HG00514.bam -O /input/HG00514.down.bam -P 0.30" 
+rm input/HG00514.bam
 
 # run SV-MeCa (141min)
 docker run -v $(pwd)/input:/input -v $(pwd)/output:/workspace/SV-MeCa/results wembasop/sv-meca:latest "/workspace/SV-MeCa/run_svmeca.sh bam -bam /input/HG00514.down.bam -ref /input/$REFERENCE -sample HG00514 -build hg38 -has_chr true -bed /input/hg38_centromer.bed" 
