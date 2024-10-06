@@ -100,8 +100,8 @@
 ##contig=<ID=NC_007605,length=171823>
 ##contig=<ID=hs37d5,length=35477943>
 ##bcftools_viewVersion=1.17+htslib-1.17
-##bcftools_viewCommand=view -R include.bed.gz -Ov -o hg002_35.breakdancer.vcf hg002_35.breakdancer.sorted.vcf.gz; Date=Wed Aug 23 15:31:10 2023
-#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	BD_D1
+##bcftools_viewCommand=view -R include.bed.gz -Ov -o hg002_35x.breakdancer.vcf hg002_35.breakdancer.sorted.vcf.gz; Date=Wed Aug 23 15:31:10 2023
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	hg002_35x.breakdancer
 1	869495	BD_1	.	<DEL>	99	.	CHROM2=1;END=870209;SVTYPE=DEL;SVLEN=836;SVORI=DEL	GT:PR:SBP:SBE	./.:6:0:0
 1	869495	BD_2	.	<DEL>	64	.	CHROM2=1;END=870301;SVTYPE=DEL;SVLEN=879;SVORI=DEL	GT:PR:SBP:SBE	./.:2:0:0.33
 1	1866379	BD_3	.	<DEL>	65	.	CHROM2=1;END=1866920;SVTYPE=DEL;SVLEN=682;SVORI=DEL	GT:PR:SBP:SBE	./.:2:0:0.12
