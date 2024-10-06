@@ -2,7 +2,9 @@
 
 ## Overview
 
-1. `hg002_del_fm_initial.tsv`: complete listing of features initially considered in deletion-specific full SV-MeCa model
+Originating, genome-wide VCF output of seven structural variant (SV) callers can be found in folder `standalone_vcfs`.
+
+
 
 ## Description
 
