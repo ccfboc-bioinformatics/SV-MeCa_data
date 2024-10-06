@@ -87,4 +87,70 @@ TARDIS_CNVL  | TARDIS VCF | CNV Likelihood | y |
 TARDIS_RPSUP  | TARDIS VCF | Number of supporting paired reads, normalized by mean coverage | y |
 TARDIS_SRSUP  | TARDIS VCF | Number of supporting split reads,  normalized by mean coverage | y |
 
+### Features considered in development of the insertion-specific full model
 
+| Feature | Source | Description | Included in final model [y/n] | 
+| ------------- | ------------ | ------------- | ----------------|
+| SURVIVOR_ID | SURVIVOR VCF | Variant ID in SURVIVOR VCF output, identical to a single variant ID in standalone VCF outputs | 
+TP | Truvari VCF | Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) | |
+SVLEN | SURVIVOR VCF | Absolute mean length of (consensus) SV call, extracted from SURVIVOR VCF output | y | 
+DELLY_ID | Delly VCF | Variant ID in Delly VCF output |
+INSV_ID | INSurVeyor VCF | Variant ID in INSurVeyor VCF output |
+MANTA_ID | Manta VCF | Variant ID in Manta VCF output |
+PINDEL_ID | Pindel VCF | Variant ID in Pindel VCF output | 
+TARDIS_ID | TARDIS VCF | Variant ID in TARDIS VCF output |
+DELLY_QUAL | Delly VCF | Normalized rank score of QUAL values extracted from Delly VCF output | n | 
+DELLY_PASS | Delly VCF |  `PASS` (1) or `LowQual` (0) in `FILTER` column of Delly VCF output | y |
+DELLY_VF | Delly VCF |  Variant fraction estimate from Delly VCF output, RV/(RR+RV) for PRECISE calls; DV/(DR+DV) for IMPRECISE calls | n |
+DELLY_HQSUPPORT | Delly VCF | Estimator of local high quality read depth: RR+RV for PRECISE calls, DR+DV for IMPRECISE calls, normalized by mean coverage |  n |
+DELLY_RD | Delly VCF | Normalized read depth ratio RD = RC/(RCL+RCR) | n |
+DELLY_MAPQ | Delly VCF | Median mapping quality of paired-end reads | y |
+DELLY_PE | Delly VCF | Count of supporting paired reads (PE), normalized by mean coverage | n |
+DELLY_SR | Delly VCF | Count of supporting split reads (SR), normalized by mean coverage | n | 
+DELLY_SRMAPQ | Delly VCF | Median mapping quality of split reads (applies only to PRECISE calls) | n |
+DELLY_SRQ | Delly VCF | Split read consensus alignment quality (applies only to PRECISE calls) | y |
+DELLY_CE | Delly VCF | Consensus sequence entropy (applies only to PRECISE calls) | y |
+DELLY_HOMLEN | Delly VCF | Predicted microhomology length using a max. edit distance of 2, set to 0 if mssing | n |
+DELLY_GQ | Delly VCF | Genotype quality | n |
+DELLY_FT_PASS | Delly VCF | Binary flag indicating that the per-sample genotype filter (FT) was passed | y | 
+DELLY_RDCN | Delly VCF | Read depth-based copy number estimate | n |
+INSV_ANOMALOUS_DEPTH
+INSV_ALT_SHORTER_THAN_REF
+INSV_LOW_SUPPORT
+INSV_NO_DISC_SUPPORT
+INSV_HOMOPOLYMER_INSSEQ
+INSV_NOT_ENOUGH_DISC_PAIRS
+INSV_DIFF_SVLEN
+INSV_OVERLAP
+INSV_DISCORDANT_LEFT
+INSV_DISCORDANT_RIGHT
+INSV_SPLIT_READS_LEFT
+INSV_SPLIT_READS_RIGHT
+INSV_SPLIT_RATIO_LEFT
+INSV_SPLIT_RATIO_RIGHT
+INSV_SPANNING_LEFT
+INSV_SPANNING_RIGHT
+INSV_SCORES_LEFT
+INSV_SCORES_RIGHT
+INSV_TRANS_QUERY_COV_LEFT
+INSV_TRANS_QUERY_COV_RIGHT
+INSV_STABLE_DEPTHS_LEFT
+INSV_STABLE_DEPTHS_RIGHT
+INSV_AVG_STABLE_NM_LEFT
+INSV_AVG_STABLE_NM_RIGHT
+INSV_IMPRECISE
+MANTA_QUAL
+MANTA_PRECISE
+MANTA_HOMLEN
+MANTA_GQ
+MANTA_SR
+MANTA_PR
+MANTA_VF
+MANTA_SampleFT
+PINDEL_DP
+PINDEL_VF
+PINDEL_HOMLEN
+TARDIS_GT
+TARDIS_CNVL
+TARDIS_RPSUP
+TARDIS_SRSUP
