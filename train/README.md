@@ -4,7 +4,7 @@
 
 Originating, genome-wide VCF output of seven structural variant (SV) callers for sample HG002 (down-sampled to coverage 35x) can be found in folder `standalone_vcfs`.
 
-VCFs were merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and [truvari](https://github.com/ACEnglish/truvari) was employed to distinguish between true and false positive, merged SV calls given the [Genome in a Bottle (GIAB) SV benchmark](https://www.nist.gov/programs-projects/genome-bottle).
+VCFs were merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and [Truvari](https://github.com/ACEnglish/truvari) was employed to distinguish between true and false positive, merged SV calls given the [Genome in a Bottle (GIAB) SV benchmark](https://www.nist.gov/programs-projects/genome-bottle).
 True positive calls are listed in `hg002_35x.truvari.tp.vcf`, false positives in `hg002_35x.truvari.fp.vcf`.
 
 ### Deletion-specific models
@@ -18,18 +18,12 @@ The predictions obtained from the final model are listed in `hg002_35x.del_fm.pr
   * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
   * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
 
-Additionally, so-called basic XGBoost models were trained, corresponding input for model training is given in ...
+Additionally, so-called basic XGBoost models were trained, considering only SV lengths and binary encoding of caller agreement. Corresponding input data for model training is given in ...
 
 
 ## Description
 
-### `hg002_del_fm_initial.tsv`
-
-#### Summary
-
-Tab-separated complete listing of all features considered in deletion-specific SV-MeCa model development.
-
-#### Feature list
+### Features considered in development of the deletion-specific full model
 
 | Feature | Source | Description | Included in final model [y/n] | 
 | ------------- | ------------ | ------------- | ----------------|
@@ -88,11 +82,9 @@ MANTA_MaxMQ0Frac  | Manta VCF | Filter for fraction of reads with MAPQ0 around e
 PINDEL_DP | Pindel VCF | Local coverage estimate: ratio of sum of `AD values and mean coverage | y |
 PINDEL_VF | Pindel VCF | Variant fraction estimate: Number of alternate allele supporting reads divided by sum of `AD` values | y | 
 PINDEL_HOMLEN | Pindel VCF | Length of base pair identical micro-homology at event breakpoints, set to zero if missing | y |
-TARDIS_GT
-TARDIS_PRECISE
-TARDIS_CNVL
-TARDIS_RPSUP
-TARDIS_SRSUP
-
+TARDIS_GT | TARDIS VCF | Genotype, encoded via 0/0 → 0; 0/1 → 0.5; 1/1 → 1 | y |
+TARDIS_CNVL  | TARDIS VCF | CNV Likelihood | y | 
+TARDIS_RPSUP  | TARDIS VCF | Number of supporting paired reads, normalized by mean coverage | y |
+TARDIS_SRSUP  | TARDIS VCF | Number of supporting split reads,  normalized by mean coverage | y |
 
 
