@@ -2,9 +2,10 @@
 
 ## Overview
 
-Originating, genome-wide VCF output of seven structural variant (SV) callers can be found in folder `standalone_vcfs`.
+Originating, genome-wide VCF output of seven structural variant (SV) callers for sample HG002 (down-sampled to coverage 35x) can be found in folder `standalone_vcfs`.
 
-
+VCFs were merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and [truvari](https://github.com/ACEnglish/truvari) was employed to distinguish between true and false positive, merged SV calls given the [Genome in a Bottle (GIAB) SV benchmark](https://www.nist.gov/programs-projects/genome-bottle).
+True positive calls are listed in `hg002_35x.truvari.tp.vcf`, false positives in `hg002_35x.truvari.fp.vcf`.
 
 ## Description
 
