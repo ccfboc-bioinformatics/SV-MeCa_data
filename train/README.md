@@ -18,7 +18,7 @@ The predictions obtained from the final model are listed in `hg002_35x.del_fm.pr
   * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
   * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
 
-Additionally, so-called basic XGBoost models were trained, considering only SV lengths and binary encoding of caller agreement. Corresponding input data for model training is given in ...
+Additionally, so-called basic XGBoost models were trained, considering only SV lengths and binary encoding of caller agreement. Corresponding input data for model training is given in `basic_model/hg002_35x.del_bm.tsv`.
 
 
 ## Description
