@@ -7,6 +7,20 @@ Originating, genome-wide VCF output of seven structural variant (SV) callers for
 VCFs were merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and [truvari](https://github.com/ACEnglish/truvari) was employed to distinguish between true and false positive, merged SV calls given the [Genome in a Bottle (GIAB) SV benchmark](https://www.nist.gov/programs-projects/genome-bottle).
 True positive calls are listed in `hg002_35x.truvari.tp.vcf`, false positives in `hg002_35x.truvari.fp.vcf`.
 
+### Deletion-specific models
+
+Features to train deletion-specific full and basic (binary) models were retrieved from TRUVARI VCFs and VCF outputs of BreakDancer, Delly, Lumpy, Manta, Pindel, and TARDIS. 
+A complete listing of all features initially considered for development of the full deletion-specific model is given in `hg002_35x.del_fm.initial.tsv`, a densed version containing only the features incorporated in the final model is provided in file `hg002_35x.del_fm.final.tsv`. See the table below for a summarizing description of all features.
+
+The predictions obtained from the final model are listed in `hg002_35x.del_fm.predictions.tsv`, the content is as follows:
+  * `SURVIVOR_ID`: SURVIVOR-generated ID of (merged) SV call, identical to entries in feature TSV files
+  * `TP`:  Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) 
+  * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
+  * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
+
+Additionally, so-called basic XGBoost models were trained, corresponding input for model training is given in ...
+
+
 ## Description
 
 ### `hg002_del_fm_initial.tsv`
