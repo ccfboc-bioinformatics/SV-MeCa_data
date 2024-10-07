@@ -114,22 +114,22 @@ DELLY_HOMLEN | Delly VCF | Predicted microhomology length using a max. edit dist
 DELLY_GQ | Delly VCF | Genotype quality | n |
 DELLY_FT_PASS | Delly VCF | Binary flag indicating that the per-sample genotype filter (FT) was passed | y | 
 DELLY_RDCN | Delly VCF | Read depth-based copy number estimate | n |
-INSV_ANOMALOUS_DEPTH  | INSurVeyor VCF |
-INSV_ALT_SHORTER_THAN_REF  | INSurVeyor VCF |
-INSV_LOW_SUPPORT  | INSurVeyor VCF |
-INSV_NO_DISC_SUPPORT  | INSurVeyor VCF |
-INSV_HOMOPOLYMER_INSSEQ  | INSurVeyor VCF |
-INSV_NOT_ENOUGH_DISC_PAIRS  | INSurVeyor VCF |
-INSV_DIFF_SVLEN  | INSurVeyor VCF |
-INSV_OVERLAP  | INSurVeyor VCF |
-INSV_DISCORDANT_LEFT  | INSurVeyor VCF |
-INSV_DISCORDANT_RIGHT  | INSurVeyor VCF |
-INSV_SPLIT_READS_LEFT  | INSurVeyor VCF |
-INSV_SPLIT_READS_RIGHT  | INSurVeyor VCF |
-INSV_SPLIT_RATIO_LEFT  | INSurVeyor VCF |
-INSV_SPLIT_RATIO_RIGHT  | INSurVeyor VCF |
-INSV_SPANNING_LEFT  | INSurVeyor VCF |
-INSV_SPANNING_RIGHT  | INSurVeyor VCF |
+INSV_ANOMALOUS_DEPTH  | INSurVeyor VCF | If 1, the insertion region has anomalous depth | y | 
+INSV_ALT_SHORTER_THAN_REF  | INSurVeyor VCF | If 1, then if this insertion/replacement was real, alternative allele would be shorter than reference | y | 
+INSV_LOW_SUPPORT  | INSurVeyor VCF | If 1, insertion has low support | y | 
+INSV_NO_DISC_SUPPORT  | INSurVeyor VCF | If 1, insertion has no discordant support | y |
+INSV_HOMOPOLYMER_INSSEQ  | INSurVeyor VCF | If 1, inserted sequence is a homopolymer | y |
+INSV_NOT_ENOUGH_DISC_PAIRS  | INSurVeyor VCF | If 1, not enough discordant pairs support this insertion | n | 
+INSV_DIFF_SVLEN  | INSurVeyor VCF | Difference between length of the inserted sequence and difference in length between REF and ALT alleles | y | 
+INSV_OVERLAP  | INSurVeyor VCF | Overlap (in bp) between the left and right contigs, assigned for calls originating from consensus_overlap approach exclusively | n | 
+INSV_DISCORDANT_LEFT  | INSurVeyor VCF | Discordant pairs supporting the left breakpoint of this insertion, normalized by mean coverage | y |
+INSV_DISCORDANT_RIGHT  | INSurVeyor VCF | Discordant pairs supporting the right breakpoint of this insertion, normalized by mean coverage | y |
+INSV_SPLIT_READS_LEFT  | INSurVeyor VCF | Split reads supporting the left breakpoint of this insertion, normalized by mean coverage | y |
+INSV_SPLIT_READS_RIGHT  | INSurVeyor VCF | Split reads supporting the right breakpoint of this insertion, normalized by mean coverage | n | 
+INSV_SPLIT_RATIO_LEFT  | INSurVeyor VCF | Smaller No. of +/- supporting split reads divided by greater number of +/- supporting split reads at left breakpoint | y |
+INSV_SPLIT_RATIO_RIGHT  | INSurVeyor VCF | Smaller No. of +/- supporting split reads divided by greater number of +/- supporting split reads at right breakpoint | n | 
+INSV_SPANNING_LEFT  | INSurVeyor VCF | Negative evidence (left), assigned for assembly and transurveyor calls exclusively, normalized by mean coverage | n |
+INSV_SPANNING_RIGHT  | INSurVeyor VCF | Negative evidence (right), assigned for assembly and transurveyor calls exclusively, normalized by mean coverage | y |
 INSV_SCORES_LEFT  | INSurVeyor VCF |
 INSV_SCORES_RIGHT  | INSurVeyor VCF |
 INSV_TRANS_QUERY_COV_LEFT  | INSurVeyor VCF |
