@@ -150,14 +150,7 @@ MANTA_SampleFT  | Manta VCF | Filters MinGQ (genotype quality) or HomRef (homozy
 PINDEL_DP | Pindel VCF | Local coverage estimate: ratio of sum of `AD` values and mean coverage | y |
 PINDEL_VF | Pindel VCF | Variant fraction estimate: Number of alternate allele supporting reads divided by sum of AD values | y |
 PINDEL_HOMLEN | Pindel VCF | Length of base pair identical micro-homology at event breakpoints, set to zero if missing | y |
-TARDIS_GT
-TARDIS_CNVL
-TARDIS_RPSUP
-TARDIS_SRSUP
-
-
-
-
-
-
-
+TARDIS_GT | TARDIS VCF | Genotype, encoded via 0/0 → 0; 0/1 → 0.5 ; 1/1 → 1 | n | 
+TARDIS_CNVL | TARDIS VCF | CNV Likelihood | y |
+TARDIS_RPSUP | TARDIS VCF | Number of supporting paired reads (PR), normalized by mean coverage | n |
+TARDIS_SRSUP | TARDIS VCF | Number of supporting split reads (SR), normalized by mean coverage | y |
