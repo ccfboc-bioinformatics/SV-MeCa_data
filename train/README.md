@@ -147,10 +147,17 @@ MANTA_SR  | Manta VCF |  Count of supporting split reads (SR), normalized by mea
 MANTA_PR  | Manta VCF | Count of supporting paired reads (PR), normalized by mean coverage | y |
 MANTA_VF  | Manta VCF |  Estimate of variant fraction: Ratio of sum of supporting SR and PR vs sum of overall SR and PR | n | 
 MANTA_SampleFT  | Manta VCF | Filters MinGQ (genotype quality) or HomRef (homozygous reference) passsed (0) vs not passed (1) | n |
-PINDEL_DP
-PINDEL_VF
-PINDEL_HOMLEN
+PINDEL_DP | Pindel VCF | Local coverage estimate: ratio of sum of `AD` values and mean coverage | y |
+PINDEL_VF | Pindel VCF | Variant fraction estimate: Number of alternate allele supporting reads divided by sum of AD values | y |
+PINDEL_HOMLEN | Pindel VCF | Length of base pair identical micro-homology at event breakpoints, set to zero if missing | y |
 TARDIS_GT
 TARDIS_CNVL
 TARDIS_RPSUP
 TARDIS_SRSUP
+
+
+
+
+
+
+
