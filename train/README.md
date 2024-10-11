@@ -130,15 +130,15 @@ INSV_SPLIT_RATIO_LEFT  | INSurVeyor VCF | Smaller No. of +/- supporting split re
 INSV_SPLIT_RATIO_RIGHT  | INSurVeyor VCF | Smaller No. of +/- supporting split reads divided by greater number of +/- supporting split reads at right breakpoint | n | 
 INSV_SPANNING_LEFT  | INSurVeyor VCF | Negative evidence (left), assigned for assembly and transurveyor calls exclusively, normalized by mean coverage | n |
 INSV_SPANNING_RIGHT  | INSurVeyor VCF | Negative evidence (right), assigned for assembly and transurveyor calls exclusively, normalized by mean coverage | y |
-INSV_SCORES_LEFT  | INSurVeyor VCF |
-INSV_SCORES_RIGHT  | INSurVeyor VCF |
-INSV_TRANS_QUERY_COV_LEFT  | INSurVeyor VCF |
-INSV_TRANS_QUERY_COV_RIGHT  | INSurVeyor VCF |
-INSV_STABLE_DEPTHS_LEFT  | INSurVeyor VCF |
-INSV_STABLE_DEPTHS_RIGHT  | INSurVeyor VCF |
-INSV_AVG_STABLE_NM_LEFT  | INSurVeyor VCF |
-INSV_AVG_STABLE_NM_RIGHT  | INSurVeyor VCF |
-INSV_IMPRECISE  | INSurVeyor VCF |
+INSV_SCORES_LEFT  | INSurVeyor VCF | Score for the left breakpoint of this insertion, assigned for transurveyor calls exclusively | n |
+INSV_SCORES_RIGHT  | INSurVeyor VCF | Score for the right breakpoint of this insertion, assigned for transurveyor calls exclusively | n |
+INSV_TRANS_QUERY_COV_LEFT  | INSurVeyor VCF | Length of the prefix of the transposed sequence that was covered by reads, assigned for transurveyor calls exclusively | y |
+INSV_TRANS_QUERY_COV_RIGHT  | INSurVeyor VCF | Length of the suffix of the transposed sequence that was covered by reads, assigned for transurveyor calls exclusively | y |
+INSV_STABLE_DEPTHS_LEFT  | INSurVeyor VCF | Depth of the stable region left of the insertion site, normalized by mean coverage | y |
+INSV_STABLE_DEPTHS_RIGHT  | INSurVeyor VCF | Depth of the stable region right of the insertion site, normalized by mean coverage | y |
+INSV_AVG_STABLE_NM_LEFT  | INSurVeyor VCF | Average edit distance (NM) of stable reads left of insertion site, normalized by read length. Assigned for assembly and transurveyor calls exclusively. | y | 
+INSV_AVG_STABLE_NM_RIGHT  | INSurVeyor VCF | Average edit distance (NM) of stable reads right of insertion site, normalized by read length. Assigned for assembly and transurveyor calls exclusively. | y |
+INSV_IMPRECISE  | INSurVeyor VCF | Flag for imprecise breakpoints and/or inserted sequence | y |
 MANTA_QUAL
 MANTA_PRECISE
 MANTA_HOMLEN
