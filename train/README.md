@@ -139,14 +139,14 @@ INSV_STABLE_DEPTHS_RIGHT  | INSurVeyor VCF | Depth of the stable region right of
 INSV_AVG_STABLE_NM_LEFT  | INSurVeyor VCF | Average edit distance (NM) of stable reads left of insertion site, normalized by read length. Assigned for assembly and transurveyor calls exclusively. | y | 
 INSV_AVG_STABLE_NM_RIGHT  | INSurVeyor VCF | Average edit distance (NM) of stable reads right of insertion site, normalized by read length. Assigned for assembly and transurveyor calls exclusively. | y |
 INSV_IMPRECISE  | INSurVeyor VCF | Flag for imprecise breakpoints and/or inserted sequence | y |
-MANTA_QUAL
-MANTA_PRECISE
-MANTA_HOMLEN
-MANTA_GQ
-MANTA_SR
-MANTA_PR
-MANTA_VF
-MANTA_SampleFT
+MANTA_QUAL | Manta VCF | Quality values `QUAL, normalized by mean coverage | n | 
+MANTA_PRECISE  | Manta VCF | Binary flag indicating precise (1) versus imprecise (0) structural variant calls | y |
+MANTA_HOMLEN  | Manta VCF | Length of base pair identical homology at event breakpoints, set to zero if missing | y |
+MANTA_GQ  | Manta VCF | Genotype Quality | y | 
+MANTA_SR  | Manta VCF |  Count of supporting split reads (SR), normalized by mean coverage | y | 
+MANTA_PR  | Manta VCF | Count of supporting paired reads (PR), normalized by mean coverage | y |
+MANTA_VF  | Manta VCF |  Estimate of variant fraction: Ratio of sum of supporting SR and PR vs sum of overall SR and PR | n | 
+MANTA_SampleFT  | Manta VCF | Filters MinGQ (genotype quality) or HomRef (homozygous reference) passsed (0) vs not passed (1) | n |
 PINDEL_DP
 PINDEL_VF
 PINDEL_HOMLEN
