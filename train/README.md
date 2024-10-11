@@ -9,7 +9,7 @@ True positive calls are listed in `hg002_35x.truvari.tp.vcf`, false positives in
 
 ### Deletion-specific models
 
-Features to train deletion-specific full and basic (binary) models were retrieved from TRUVARI VCFs and VCF outputs of BreakDancer, Delly, Lumpy, Manta, Pindel, and TARDIS. 
+Features to train deletion-specific full and basic (binary) models were retrieved from TRUVARI VCFs and VCF outputs of [BreakDancer](https://github.com/genome/breakdancer), [Delly](https://github.com/dellytools/delly), [LUMPY](https://github.com/arq5x/lumpy-sv), [Manta](https://github.com/Illumina/manta), [Pindel](https://github.com/genome/pindel), and [TARDIS](https://github.com/BilkentCompGen/tardis). 
 A complete listing of all features initially considered for development of the full deletion-specific model is given in `hg002_35x.del_fm.initial.tsv`, a densed version containing only the features incorporated in the final model is provided in file `hg002_35x.del_fm.final.tsv`. See the table below for a summarizing description of all features.
 
 The predictions obtained from the final model are listed in `hg002_35x.del_fm.predictions.tsv`, the content is as follows:
@@ -20,6 +20,19 @@ The predictions obtained from the final model are listed in `hg002_35x.del_fm.pr
 
 Additionally, so-called basic XGBoost models were trained, considering only SV lengths and binary encoding of caller agreement. Corresponding input data for model training is given in `basic_model/hg002_35x.del_bm.tsv`.
 
+### Insertion-specfific models
+
+Features to train full and basic (binary) models for insertions (including duplications) were retrieved from TRUVARI VCFs and VCF outputs of 
+SV-MeCa is a meta-caller for WGS short read data that combines seven standalone structural variant (SV) callers, including [Delly](https://github.com/dellytools/delly),  [INSurVeyor](https://github.com/kensung-lab/INSurVeyor), [Manta](https://github.com/Illumina/manta), [Pindel](https://github.com/genome/pindel), and [TARDIS](https://github.com/BilkentCompGen/tardis). 
+A complete listing of all features initially considered for development of the full deletion-specific model is given in `hg002_35x.del_fm.initial.tsv`, a densed version containing only the features incorporated in the final model is provided in file `hg002_35x.ins_fm.final.tsv`. See the table below for a summarizing description of all features.
+
+The predictions obtained from the final model are listed in `hg002_35x.ins_fm.predictions.tsv`, the content is as follows:
+  * `SURVIVOR_ID`: SURVIVOR-generated ID of (merged) SV call, identical to entries in feature TSV files
+  * `TP`:  Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) 
+  * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
+  * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
+
+Input data for training of the corresponding basic XGBoost model is given in `basic_model/hg002_35x.ins_bm.tsv`.
 
 ## Description
 
