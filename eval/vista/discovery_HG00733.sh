@@ -14,7 +14,6 @@ fi
 runDir=NA19240_run
 inputFile=../NA19240.bam
 sites=NA19240.discovery.vcf
-genotypes=NA19240.genotypes.vcf
 
 # These executables must be on your path.
 which java > /dev/null || exit 1
@@ -72,31 +71,4 @@ java -cp ${classpath} ${mx} -jar ${SV_DIR}/lib/SVToolkit.jar
      -maximumSize 100000 \
      -run \
     || exit 1
-
-# (grep -v ^##fileDate= ${sites} | grep -v ^##source= | grep -v ^##reference= | diff -q - benchmark/${sites}) \
-#     || { echo "Error: test results do not match benchmark data"; exit 1; }
-
-# Run genotyping on the discovered sites.
-#  java -Djava.io.tmpdir=/nonexistent -cp ${classpath} \
-#      org.broadinstitute.gatk.queue.QCommandLine \
-#      -S ${SV_DIR}/qscript/SVGenotyper.q \
-#      -S ${SV_DIR}/qscript/SVQScript.q \
-#      -cp ${classpath} \
-#      -gatk ${SV_DIR}/lib/gatk/GenomeAnalysisTK.jar \
-#      -configFile ${SV_DIR}/conf/genstrip_parameters.txt \
-#      -R ${REFERENCE} \
-#      -I ${input_file} \
-#      -md ${runDir}/metadata \
-#      -runDirectory ${runDir} \
-#      -genderMapFile NA19240_gender.map \
-#      -L autosomes.list \
-#      -jobLogDir ${runDir}/logs \
-#      -vcf ${sites} \
-#      -O ${genotypes} \
-#      -parallelRecords 100 \
-#      -run \
-#     || exit 1
-
-# (grep -v ^##fileDate= ${genotypes} | grep -v ^##source= | grep -v ^##reference= | diff -q - benchmark/${genotypes}) \
-#     || { echo "Error: test results do not match benchmark data"; exit 1; }
 
