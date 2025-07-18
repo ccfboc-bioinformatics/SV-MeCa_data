@@ -29,8 +29,8 @@ A complete listing of all features initially considered for development of the f
 The predictions obtained from the final model are listed in `hg002_35x.ins_fm.predictions.tsv`, the content is as follows:
   * `SURVIVOR_ID`: SURVIVOR-generated ID of (merged) SV call, identical to entries in feature TSV files
   * `TP`:  Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) 
-  * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
-  * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
+  * `Prediction`: Prediction assigned by SV-MeCa's final insertion-specific XGBoost model (1: true positive; 0: false positive) 
+  * `Prob`: Predition probabilites assigned by SV-MeCa's final insertion-specific XGBoost model
 
 Input data for training of the corresponding basic XGBoost model is given in `basic_model/hg002_35x.ins_bm.tsv`.
 
