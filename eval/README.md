@@ -9,6 +9,6 @@ Additionally, so-called basic XGBoost models were trained, considering only SV l
 The features shown in resulting predictions files are the following:
   * `SURVIVOR_ID`: SURVIVOR-generated ID of (merged) SV call, identical to entries in feature TSV files
   * `TP`:  Binary encoding of true and false positive SV calls (1: true positive; 0: false positive) 
-  * `Prediction`: Prediction assigned by SV-MeCa's final deletion-specific XGBoost model (1: true positive; 0: false positive) 
-  * `Prob`: Predition probabilites assigned by SV-MeCa's final deletion-specific XGBoost model
+  * `Prediction`: Prediction assigned by SV-MeCa's final XGBoost model (1: true positive; 0: false positive) 
+  * `Prob`: Predition probabilites assigned by SV-MeCa's final XGBoost model
 
