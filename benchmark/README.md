@@ -8,9 +8,9 @@ bash truvari_bench_metrics.sh <HG002-CMRG|HG00514|HG00733|NA19240>
 ```
 >⚠️ **Important:** Truvari is required to run the script. Our tests use v~4.0.0
 
-In this example, `HG00514` refers to the directory containing the bgzip- and tabix-indexed comparison and benchmark VCF files, along with the corresponding region of interest.
+The script processes the bgzip and tabix-indexed comparison and benchmark VCF files located in the specified subfolder with respect to the corresponding regions of interest.
 
-The script produces, for each caller in the given directory, a `truvari bench` output folder containing:
+A subdirectory truvari_* is created per SV caller, which contains the following files:
 
 * `tp-comp.vcf.gz`: True Positive (TP) calls from the **comparison** set
 * `fp.vcf.gz`: False Positive (FP) calls from the **comparison** set
