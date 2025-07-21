@@ -15,7 +15,7 @@ if ! cd "$SAMPLE"; then
   exit 1
 fi
 
-CALLERS=("breakdancer" "delly" "insurveyor" "lumpy" "manta" "pindel" "tardis")
+CALLERS=("breakdancer" "delly" "insurveyor" "lumpy" "manta" "pindel" "tardis" "svmeca")
 
 for CALLER in "${CALLERS[@]}"; do
   if [[ "$CALLER" == "delly" || "$CALLER" == "insurveyor" ]]; then
