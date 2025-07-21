@@ -1,0 +1,572 @@
+Running: truvari bench for breakdancer
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:54,136 [INFO] Truvari v4.0.0
+2025-07-21 10:52:54,137 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_breakdancer.vcf.gz -o truvari_breakdancer -p 0 --includebed HG00514.bed
+2025-07-21 10:52:54,137 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_breakdancer.vcf.gz",
+    "output": "truvari_breakdancer",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "BD_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": false,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:54,189 [INFO] Including 129 bed regions
+[W::tbx_parse1] VCF INFO/END=36101843 is smaller than POS at chr1:125119414
+This tag will be ignored. Note: only one invalid END tag will be reported.
+[W::vcf_parse_info] INFO/END=36101843 is smaller than POS at chr1:125119415
+2025-07-21 10:52:55,148 [INFO] Zipped 24753 variants Counter({'base': 22025, 'comp': 2728})
+2025-07-21 10:52:55,148 [INFO] 18643 chunks of 24753 variants Counter({'base': 22024, 'comp': 2727, '__filtered': 2})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:56,372 [INFO] Stats: {
+    "TP-base": 1028,
+    "TP-comp": 1028,
+    "FP": 1699,
+    "FN": 20996,
+    "precision": 0.376971030436377,
+    "recall": 0.04667635306937886,
+    "f1": 0.08306735081410853,
+    "base cnt": 22024,
+    "comp cnt": 2727,
+    "TP-comp_TP-gt": 0,
+    "TP-comp_FP-gt": 1028,
+    "TP-base_TP-gt": 0,
+    "TP-base_FP-gt": 1028,
+    "gt_concordance": 0.0,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(None, None)": 427
+        },
+        "(0, 1)": {
+            "(None, None)": 301
+        },
+        "(1, 0)": {
+            "(None, None)": 296
+        },
+        "(None, 1)": {
+            "(None, None)": 2
+        },
+        "(1, None)": {
+            "(None, None)": 2
+        }
+    }
+}
+2025-07-21 10:52:56,372 [INFO] Finished bench
+Running: truvari bench with PASS for delly
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:56,943 [INFO] Truvari v4.0.0
+2025-07-21 10:52:56,943 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_delly.vcf.gz -o truvari_delly -p 0 --includebed HG00514.bed --passonly
+2025-07-21 10:52:56,943 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_delly.vcf.gz",
+    "output": "truvari_delly",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "DL_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": true,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:57,000 [INFO] Including 129 bed regions
+2025-07-21 10:52:58,508 [INFO] Zipped 38227 variants Counter({'base': 22025, 'comp': 16202})
+2025-07-21 10:52:58,508 [INFO] 22531 chunks of 38227 variants Counter({'base': 22024, 'comp': 8813, '__filtered': 7390})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:52:59,850 [INFO] Stats: {
+    "TP-base": 3096,
+    "TP-comp": 3096,
+    "FP": 1483,
+    "FN": 18928,
+    "precision": 0.6761301594234549,
+    "recall": 0.1405739193606974,
+    "f1": 0.23275570424388223,
+    "base cnt": 22024,
+    "comp cnt": 4579,
+    "TP-comp_TP-gt": 2889,
+    "TP-comp_FP-gt": 207,
+    "TP-base_TP-gt": 2889,
+    "TP-base_FP-gt": 207,
+    "gt_concordance": 0.9331395348837209,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(1, 1)": 1300,
+            "(0, 1)": 165,
+            "(0, 0)": 4,
+            "(None, None)": 5
+        },
+        "(0, 1)": {
+            "(0, 1)": 801,
+            "(1, 1)": 10,
+            "(None, None)": 3,
+            "(0, 0)": 1
+        },
+        "(1, 0)": {
+            "(0, 1)": 781,
+            "(0, 0)": 4,
+            "(None, None)": 4,
+            "(1, 1)": 7
+        },
+        "(None, 1)": {
+            "(1, 1)": 4,
+            "(0, 1)": 5
+        },
+        "(1, None)": {
+            "(0, 1)": 2
+        }
+    }
+}
+2025-07-21 10:52:59,850 [INFO] Finished bench
+Running: truvari bench with PASS for insurveyor
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:00,409 [INFO] Truvari v4.0.0
+2025-07-21 10:53:00,409 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_insurveyor.vcf.gz -o truvari_insurveyor -p 0 --includebed HG00514.bed --passonly
+2025-07-21 10:53:00,409 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_insurveyor.vcf.gz",
+    "output": "truvari_insurveyor",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": true,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:00,469 [INFO] Including 129 bed regions
+2025-07-21 10:53:01,768 [INFO] Zipped 38093 variants Counter({'base': 22025, 'comp': 16068})
+2025-07-21 10:53:01,768 [INFO] 18344 chunks of 38093 variants Counter({'base': 22024, '__filtered': 11991, 'comp': 4078})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:03,158 [INFO] Stats: {
+    "TP-base": 3428,
+    "TP-comp": 3428,
+    "FP": 640,
+    "FN": 18596,
+    "precision": 0.8426745329400197,
+    "recall": 0.1556483835815474,
+    "f1": 0.2627625325770351,
+    "base cnt": 22024,
+    "comp cnt": 4068,
+    "TP-comp_TP-gt": 1528,
+    "TP-comp_FP-gt": 1900,
+    "TP-base_TP-gt": 1528,
+    "TP-base_FP-gt": 1900,
+    "gt_concordance": 0.4457409568261377,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(1,)": 1900
+        },
+        "(0, 1)": {
+            "(1,)": 749
+        },
+        "(1, 0)": {
+            "(1,)": 768
+        },
+        "(None, 1)": {
+            "(1,)": 3
+        },
+        "(1, None)": {
+            "(1,)": 8
+        }
+    }
+}
+2025-07-21 10:53:03,158 [INFO] Finished bench
+Running: truvari bench for lumpy
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:03,690 [INFO] Truvari v4.0.0
+2025-07-21 10:53:03,690 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_lumpy.vcf.gz -o truvari_lumpy -p 0 --includebed HG00514.bed
+2025-07-21 10:53:03,690 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_lumpy.vcf.gz",
+    "output": "truvari_lumpy",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "LP_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": false,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:03,743 [INFO] Including 129 bed regions
+2025-07-21 10:53:04,808 [INFO] Zipped 25530 variants Counter({'base': 22025, 'comp': 3505})
+2025-07-21 10:53:04,808 [INFO] 18377 chunks of 25530 variants Counter({'base': 22024, 'comp': 3493, '__filtered': 13})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:05,996 [INFO] Stats: {
+    "TP-base": 2812,
+    "TP-comp": 2812,
+    "FP": 619,
+    "FN": 19212,
+    "precision": 0.8195861264937336,
+    "recall": 0.1276788957500908,
+    "f1": 0.22093891180514633,
+    "base cnt": 22024,
+    "comp cnt": 3431,
+    "TP-comp_TP-gt": 2586,
+    "TP-comp_FP-gt": 226,
+    "TP-base_TP-gt": 2586,
+    "TP-base_FP-gt": 226,
+    "gt_concordance": 0.9196301564722618,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(1, 1)": 1134,
+            "(0, 1)": 200
+        },
+        "(0, 1)": {
+            "(0, 1)": 719,
+            "(1, 1)": 6
+        },
+        "(1, 0)": {
+            "(0, 1)": 731,
+            "(1, 1)": 16
+        },
+        "(None, 1)": {
+            "(1, 1)": 4,
+            "(0, 1)": 1
+        },
+        "(1, None)": {
+            "(0, 1)": 1
+        }
+    }
+}
+2025-07-21 10:53:05,997 [INFO] Finished bench
+Running: truvari bench for manta
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:06,533 [INFO] Truvari v4.0.0
+2025-07-21 10:53:06,533 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_manta.vcf.gz -o truvari_manta -p 0 --includebed HG00514.bed
+2025-07-21 10:53:06,533 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_manta.vcf.gz",
+    "output": "truvari_manta",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "MT_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": false,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:06,589 [INFO] Including 129 bed regions
+2025-07-21 10:53:08,006 [INFO] Zipped 30512 variants Counter({'base': 22025, 'comp': 8487})
+2025-07-21 10:53:08,007 [INFO] 18704 chunks of 30512 variants Counter({'base': 22024, 'comp': 8007, '__filtered': 481})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:09,335 [INFO] Stats: {
+    "TP-base": 6416,
+    "TP-comp": 6416,
+    "FP": 1575,
+    "FN": 15608,
+    "precision": 0.8029032661744463,
+    "recall": 0.2913185615691972,
+    "f1": 0.42751957354656006,
+    "base cnt": 22024,
+    "comp cnt": 7991,
+    "TP-comp_TP-gt": 5884,
+    "TP-comp_FP-gt": 532,
+    "TP-base_TP-gt": 5884,
+    "TP-base_FP-gt": 532,
+    "gt_concordance": 0.9170822942643392,
+    "gt_matrix": {
+        "(0, 1)": {
+            "(1, 1)": 118,
+            "(0, 1)": 1297
+        },
+        "(1, 1)": {
+            "(1, 1)": 3232,
+            "(0, 1)": 259
+        },
+        "(1, 0)": {
+            "(0, 1)": 1348,
+            "(1, 1)": 137
+        },
+        "(None, 1)": {
+            "(1, 1)": 8,
+            "(0, 1)": 5
+        },
+        "(1, None)": {
+            "(1, 1)": 10,
+            "(0, 1)": 2
+        }
+    }
+}
+2025-07-21 10:53:09,335 [INFO] Finished bench
+Running: truvari bench for pindel
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G
+2025-07-21 10:53:09,922 [INFO] Truvari v4.0.0
+2025-07-21 10:53:09,922 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_pindel.vcf.gz -o truvari_pindel -p 0 --includebed HG00514.bed
+2025-07-21 10:53:09,922 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_pindel.vcf.gz",
+    "output": "truvari_pindel",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "PD_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": false,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:09,953 [INFO] Including 129 bed regions
+2025-07-21 10:53:14,115 [INFO] Zipped 45414 variants Counter({'comp': 23389, 'base': 22025})
+2025-07-21 10:53:14,115 [INFO] 21292 chunks of 45414 variants Counter({'comp': 23064, 'base': 22024, '__filtered': 326})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:18,543 [INFO] Stats: {
+    "TP-base": 5574,
+    "TP-comp": 5574,
+    "FP": 17490,
+    "FN": 16450,
+    "precision": 0.24167533818938605,
+    "recall": 0.25308754086451146,
+    "f1": 0.24724982256919803,
+    "base cnt": 22024,
+    "comp cnt": 23064,
+    "TP-comp_TP-gt": 3302,
+    "TP-comp_FP-gt": 2272,
+    "TP-base_TP-gt": 3302,
+    "TP-base_FP-gt": 2272,
+    "gt_concordance": 0.5923932543954072,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(0, 1)": 949,
+            "(0, 0)": 570,
+            "(1, 1)": 1189
+        },
+        "(0, 1)": {
+            "(0, 1)": 1051,
+            "(0, 0)": 318,
+            "(1, 1)": 18
+        },
+        "(1, 0)": {
+            "(0, 1)": 1052,
+            "(0, 0)": 371,
+            "(1, 1)": 22
+        },
+        "(None, 1)": {
+            "(1, 1)": 4,
+            "(0, 0)": 10,
+            "(0, 1)": 6
+        },
+        "(1, None)": {
+            "(0, 0)": 8,
+            "(1, 1)": 2,
+            "(0, 1)": 4
+        }
+    }
+}
+2025-07-21 10:53:18,543 [INFO] Finished bench
+Running: truvari bench for tardis
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:19,067 [INFO] Truvari v4.0.0
+2025-07-21 10:53:19,067 [INFO] Command /projects/ag-fbz/rnkouame/software/miniconda3/envs/truvari4/bin/truvari bench -b HG00514_benchmark.vcf.gz -c HG00514_tardis.vcf.gz -o truvari_tardis -p 0 --includebed HG00514.bed
+2025-07-21 10:53:19,067 [INFO] Params:
+{
+    "base": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_benchmark.vcf.gz",
+    "comp": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514_tardis.vcf.gz",
+    "output": "truvari_tardis",
+    "includebed": "/projects/ag-fbz/rnkouame/github/SV-MeCa_data/benchmark/HG00514/HG00514.bed",
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "minhaplen": 50,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "chunksize": 1000,
+    "bSample": "HG00514",
+    "cSample": "TD_HG00514",
+    "dup_to_ins": false,
+    "sizemin": 50,
+    "sizefilt": 30,
+    "sizemax": 50000,
+    "passonly": false,
+    "no_ref": false,
+    "pick": "single"
+}
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:19,097 [INFO] Including 129 bed regions
+[W::tbx_parse1] VCF INFO/END=125180597 is smaller than POS at chr1:125180607
+This tag will be ignored. Note: only one invalid END tag will be reported.
+[W::vcf_parse_info] INFO/END=125180597 is smaller than POS at chr1:125180608
+2025-07-21 10:53:20,406 [INFO] Zipped 30778 variants Counter({'base': 22025, 'comp': 8753})
+2025-07-21 10:53:20,406 [INFO] 21165 chunks of 30778 variants Counter({'base': 22024, 'comp': 8734, '__filtered': 20})
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/REF_TRF" is invalid, forcing Number=0
+2025-07-21 10:53:21,705 [INFO] Stats: {
+    "TP-base": 2095,
+    "TP-comp": 2095,
+    "FP": 6625,
+    "FN": 19929,
+    "precision": 0.24025229357798164,
+    "recall": 0.09512350163458046,
+    "f1": 0.13628675513921415,
+    "base cnt": 22024,
+    "comp cnt": 8720,
+    "TP-comp_TP-gt": 1129,
+    "TP-comp_FP-gt": 966,
+    "TP-base_TP-gt": 1129,
+    "TP-base_FP-gt": 966,
+    "gt_concordance": 0.5389021479713604,
+    "gt_matrix": {
+        "(1, 1)": {
+            "(0, 1)": 959,
+            "(1, 1)": 202
+        },
+        "(0, 1)": {
+            "(0, 1)": 465,
+            "(1, 1)": 3
+        },
+        "(1, 0)": {
+            "(0, 1)": 457,
+            "(1, 1)": 2
+        },
+        "(None, 1)": {
+            "(0, 1)": 4,
+            "(1, 1)": 2
+        },
+        "(1, None)": {
+            "(0, 1)": 1
+        }
+    }
+}
+2025-07-21 10:53:21,705 [INFO] Finished bench
